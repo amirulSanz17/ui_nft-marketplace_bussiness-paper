@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+/* Animation and chart helpers */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-line-animate {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1.5s ease-out forwards;
+}
+
+.svg-line-static {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+}
+
+.mini-chart-overflow-visible {
+  overflow: visible;
+}
+
+.chart-legend-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--legend-dot-color, currentColor);
+}
+
+/* Responsive container */
+.app-container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app-container {
+    max-width: 1280px;
+  }
+}
