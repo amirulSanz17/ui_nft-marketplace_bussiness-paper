@@ -312,24 +312,11 @@ export default function App() {
         )}
       </div>
 
-      {/* Mobile Layout - Phone Mockup */}
-      <div className="md:hidden flex items-center justify-center p-4 min-h-screen">
-        <div className="w-full max-w-md h-[844px] bg-white rounded-[3rem] shadow-2xl overflow-hidden relative border-[14px] border-black">
-          {/* Status Bar - Mobile Only */}
-          <div className="absolute top-0 left-0 right-0 h-11 bg-white z-50">
-            <div className="flex items-center justify-between px-8 h-full">
-              <span className="text-sm">9:41</span>
-              <div className="w-28 h-7 bg-black rounded-full" />
-              <div className="flex gap-1 items-center">
-                <div className="w-4 h-3 border border-black rounded-sm" />
-                <div className="w-4 h-3 border border-black rounded-sm" />
-                <div className="w-6 h-3 border border-black rounded-sm" />
-              </div>
-            </div>
-          </div>
-
+      {/* Mobile Layout */}
+      <div className="md:hidden flex items-center justify-center min-h-screen w-full">
+        <div className="w-full h-screen bg-white overflow-hidden relative">
           {/* Content */}
-          <div className="h-full pt-11 pb-20 overflow-auto scrollbar-hide">
+          <div className="h-full pb-20 overflow-auto scrollbar-hide">
             {renderPage()}
           </div>
 
