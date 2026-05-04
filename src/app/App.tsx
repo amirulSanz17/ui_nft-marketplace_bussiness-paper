@@ -313,64 +313,62 @@ export default function App() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="md:hidden flex items-center justify-center min-h-screen w-full">
-        <div className="w-full h-screen bg-white relative">
-          {/* Content */}
-          <div className="h-full pb-20 overflow-auto scrollbar-hide">
-            {renderPage()}
-          </div>
+      <div className="md:hidden w-full h-screen bg-white">
+        {/* Content */}
+        <div className="h-full pb-20 overflow-auto scrollbar-hide">
+          {renderPage()}
         </div>
-
-        {/* Bottom Navigation - Mobile */}
-        {showBottomNav && (
-          <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 flex justify-around items-center z-50">
-            <button
-              type="button"
-              onClick={() => handleNavigate("home")}
-              className={`flex flex-col items-center gap-1 ${currentPage === "home" ? "text-[#2d4a2b]" : "text-gray-400"}`}
-              aria-label="Go to home"
-            >
-              <Home
-                className="w-6 h-6"
-                fill={currentPage === "home" ? "#2d4a2b" : "none"}
-              />
-            </button>
-            <button
-              type="button"
-              onClick={() => handleNavigate("portfolio")}
-              className={`flex flex-col items-center gap-1 ${currentPage === "portfolio" ? "text-[#2d4a2b]" : "text-gray-400"}`}
-              aria-label="Go to portfolio"
-            >
-              <Wallet
-                className="w-6 h-6"
-                fill={currentPage === "portfolio" ? "#2d4a2b" : "none"}
-              />
-            </button>
-            <button
-              type="button"
-              onClick={() => handleNavigate("shop")}
-              className={`flex flex-col items-center gap-1 ${currentPage === "shop" ? "text-[#2d4a2b]" : "text-gray-400"}`}
-              aria-label="Go to shop"
-            >
-              <ShoppingBag
-                className="w-6 h-6"
-                fill={currentPage === "shop" ? "#2d4a2b" : "none"}
-              />
-            </button>
-            <button
-              type="button"
-              onClick={() => handleNavigate("balance")}
-              className={`flex flex-col items-center gap-1 ${currentPage === "balance" ? "text-[#2d4a2b]" : "text-gray-400"}`}
-              aria-label="Go to balance"
-            >
-              <User
-                className="w-6 h-6"
-                fill={currentPage === "balance" ? "#2d4a2b" : "none"}
-              />
-            </button>
-          </div>
-        )}
       </div>
+
+      {/* Bottom Navigation - Mobile */}
+      {showBottomNav && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-6 py-3 flex justify-around items-center z-50 shadow-sm">
+          <button
+            type="button"
+            onClick={() => handleNavigate("home")}
+            className={`flex flex-col items-center gap-1 ${currentPage === "home" ? "text-[#2d4a2b]" : "text-gray-400"}`}
+            aria-label="Go to home"
+          >
+            <Home
+              className="w-6 h-6"
+              fill={currentPage === "home" ? "#2d4a2b" : "none"}
+            />
+          </button>
+          <button
+            type="button"
+            onClick={() => handleNavigate("portfolio")}
+            className={`flex flex-col items-center gap-1 ${currentPage === "portfolio" ? "text-[#2d4a2b]" : "text-gray-400"}`}
+            aria-label="Go to portfolio"
+          >
+            <Wallet
+              className="w-6 h-6"
+              fill={currentPage === "portfolio" ? "#2d4a2b" : "none"}
+            />
+          </button>
+          <button
+            type="button"
+            onClick={() => handleNavigate("shop")}
+            className={`flex flex-col items-center gap-1 ${currentPage === "shop" ? "text-[#2d4a2b]" : "text-gray-400"}`}
+            aria-label="Go to shop"
+          >
+            <ShoppingBag
+              className="w-6 h-6"
+              fill={currentPage === "shop" ? "#2d4a2b" : "none"}
+            />
+          </button>
+          <button
+            type="button"
+            onClick={() => handleNavigate("balance")}
+            className={`flex flex-col items-center gap-1 ${currentPage === "balance" ? "text-[#2d4a2b]" : "text-gray-400"}`}
+            aria-label="Go to balance"
+          >
+            <User
+              className="w-6 h-6"
+              fill={currentPage === "balance" ? "#2d4a2b" : "none"}
+            />
+          </button>
+        </div>
+      )}
 
       {/* Modals */}
       {selectedProduct && (
