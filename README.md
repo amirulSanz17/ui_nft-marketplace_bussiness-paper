@@ -2,6 +2,9 @@
 
 Platform marketplace NFT yang menggabungkan merchandise fisik dengan NFT digital (Phygital). Setiap produk fisik dilengkapi dengan NFT sebagai bukti keaslian dan akses eksklusif.
 
+## 💻 Web
+**https://nft-marketspace.vercel.app/**
+
 ## 🆕 What's New in v1.2.0
 
 ### Major Updates
